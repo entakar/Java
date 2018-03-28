@@ -1,0 +1,50 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.Random;
+
+public class Main {
+    public static void main(String[] args) throws Exception {
+        // Your code here!
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String line = br.readLine();
+        
+        System.out.println("Java hello world");
+        
+        int x = 0;
+        
+        Random rand = new Random();
+        while(x < 10){
+            System.out.print(x + " = ");
+            int key = rand.nextInt(8);
+            System.out.print(key + " => ");
+            String name = createName(key);
+            System.out.println(name);
+            x++;
+        }
+    }
+    
+    public static String createName(int key){
+        
+        switch (key){
+            case 0:
+                return "Mirin_Furukawa";
+              //  break;
+            case 1:
+                return "Risa_Aizawa";
+                //break;
+            case 2:
+                return "Nemu_Yumemi";
+            case 3:
+                return "Eimi_Naruse";
+            case 4:
+                return "Ayane_Fujisaki";
+            case 5:
+                return "Rin_Kaname";
+            case 6:
+                return "Nagi_Nemoto";
+            default:
+                return "Moga_Mogami";
+             //   break;
+        }
+    }
+}
