@@ -1,0 +1,109 @@
+/* 
+
+*/
+import java.io.*;
+import java.util.*;
+
+public class DempaEngine{
+
+    private List<String> albumList;
+
+    //
+    String name;
+    String phonetic;
+    String age;
+    String aa;
+    String catchphrase;
+
+    public DempaEngine(){
+        albumList= setAlbum();
+
+    }
+
+    public List<String> setAlbum(){
+        albumList = new ArrayList<>();
+        albumList.add("ねぇきいて?宇宙を救うのは、きっとお寿司…ではなく、でんぱ組.inc!");
+        albumList.add("WORLD WIDE DEMPA");
+        albumList.add("WWDD");
+        albumList.add("GO GO DEMPA");
+        albumList.add("WWDBEST ～電波良好!～");
+        return albumList;
+    }
+
+    public List<String> getAlbum(){
+        return albumList;
+    }
+
+    public boolean setMember(int key){
+        switch(key){
+            case 1:
+                name = "古川未鈴";
+                phonetic = "Mirin_Furukawa";
+                age = "17";
+                aa = "(´･ヮ･`)";
+                catchphrase ="歌って踊れるゲーマーアイドル";
+                break;
+            case 2:
+                name = "相沢梨紗";
+                phonetic = "Risa_Aizaw";
+                age = "17";
+                aa = "(`めνめ)";
+                catchphrase = "2.5次元伝説!";
+                break;
+            case 3:
+                name = "夢眠ねむ";
+                phonetic = "Nemu_Yumemi";
+                age = "17";
+                aa = "(бωб)";
+                catchphrase = "永遠の魔法少女未満";
+                break;
+            case 4:
+                name = "成瀬瑛美";
+                phonetic = "Eimi_Naruse";
+                age = "17";
+                aa = "ヽ(*´∀`*)ノ";
+                catchphrase = "ハイテンションA-POPガール";
+                break;
+            case 5:
+                name = "藤咲彩音";
+                phonetic = "Ayane_Fujisaki";
+                age = "22";
+                aa = "(｢`>ω<)｢";
+                catchphrase = "踊ってみたら七変化!";
+                break;
+            case 6:
+                name = "鹿目凛";
+                phonetic = "Rin_Kaname";
+                age = "21";
+                aa = "--";
+                catchphrase = "イラストも描けちゃうあなたの彼女♡";
+                break;
+            case 7:
+                name = "根本凪";
+                phonetic = "Nagi_Nemoto";
+                age = "19";
+                aa = "(´`)";
+                catchphrase = "歌って描けるポンコツカワウソ";
+                break;
+            case 8:
+                name = "でんぱ組.inc";
+                phonetic = "dempagumi.inc";
+                age = "--";
+                aa = "--";
+                catchphrase = "マイナスからのナンバーワン";
+                break;
+            case 9:
+                name = "修了";
+                break;
+            default:
+                name = "最上もが";
+                phonetic = "Moga_Mogami";
+                age = "29";
+                aa = "(・Θ・)";
+                catchphrase = "宇宙を駆ける金色の異端児";
+                break;    
+        }
+        return true;
+    }
+
+}
