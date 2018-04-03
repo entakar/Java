@@ -1,0 +1,55 @@
+/* 
+ * でんぱ組.inc
+ * since 2007
+ * DEARSTAGE
+*/
+
+import java.util.ArrayList;
+import java.util.List;
+import java.io.*;
+
+public class Dempagumi{
+
+    public static boolean memFlg = false;
+    public static void main(String[] args){
+        boolean flg = true;
+        String memberNo = null;
+        String endFlg = "9";
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        DempaEngine de = new DempaEngine();
+/*
+        List<String> albumList = new ArrayList<>();
+        System.out.println("ORIGINAL ALBUM");
+        albumList = de.getAlbum();
+        for (String s : albumList) {
+            System.out.println(s);
+        }
+*/
+        while(flg){
+            System.out.println("メンバーを選択してください");
+            for(int i = 1;i < 10;i++){
+                de.setMember(i);
+                System.out.println(i + "：" + de.name);
+            }
+            //インプット
+            try {
+                memberNo = br.readLine() ;
+            } catch (IOException e) {
+                System.err.println("もう一度入力してください");
+            }
+            if(memberNo.equals(endFlg)){
+                flg = false;
+            }else{
+                memFlg = de.setMember(Integer.valueOf(memberNo));
+                System.out.println("//////////////////////////////////////////////\n");
+                System.out.println("氏名：" + de.name +"("+ de.phonetic + ")");
+                System.out.println("年齢：" + de.age);
+                System.out.println("顔文字：" + de.aa);
+                System.out.println("キャッチフレーズ：" + de.catchphrase);
+                System.out.println("\n//////////////////////////////////////////////\n");
+            }
+        }
+    }
+}
